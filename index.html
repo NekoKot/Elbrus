@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link href="css/styles.css" rel="stylesheet">
+  <title>Эльбрусская прохлада</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container-fluid justify-content-start nowrap">
+      <a class="navbar-brand" href="#">Эльбрусская<br>Прохлада</a>
+      <nav class="nav flex-nowrap">
+        <a class="nav-link active" href="#">Главная</a>
+        <a class="nav-link" href="#">Каталог</a>
+        <a class="nav-link" href="#">Как заказать</a>
+        <a class="nav-link" href="#">Отзывы</a>
+        <a class="nav-link" href="#">О нас</a>
+        <a class="nav-link" href="#">Контакты</a>
+      </nav>
+      <div class="header__contacts d-flex flex-row justify-content-end align-items-center">
+        <a href="tel:+79280761498">+7 928 076 14 98</a>
+        <button type="button" class="btn btn-primary">Заказать обратный звонок</button>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid container__first">
+    <div class="row align-items-center">
+      <div class="col">
+        <h1>Оптовые поставки<br>
+          минеральной воды<br>
+          и безалкогольных напитков</h1>
+      </div>
+      <!-- SLIDER -->
+      <div class="col-8 slider">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/img/картиночка.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="/img/вишня.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="/img/водичька.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="/img/квас.png" class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+    </div>
+    <!-- Страница 2 -->
+    <div class="row about">
+      <div class="col">
+        <h2 class="main__title">Немного о нас</h2>
+        <p class="about__description">ООО "Эльбрусская прохлада"- отптовые продажи безалкогольных напитков от
+          производителя.Широкий ассортимент
+          лимонадов,минеральной воды,разных сементов.Артезианская питьевая вода,добывается из скважины глубиной 230 м.
+          Автоматизированная система розлива исключает любые загрязнения в процессе производства, а отсутствие
+          поблизости крупных предприятий и сельхозугодий гарантирует чистоту добываемой воды. </p>
+      </div>
+      <div class="col">
+        <!-- Слайдер -->
+      </div>
+      <div class="row price__row">
+        <div class="col-6 price__col-first">
+          <h2 class="price__title">Получить
+            оптовый
+            прайс</h2>
+          <p class="price_description">Оставьте заявку и получите прайс на почту</p>
+        </div>
+        <div class="col price__col-second d-flex align-items-center">
+          <form>
+            <div class="form__item">
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Имя" required
+                aria-describedby="emailHelp">
+            </div>
+            <div>
+              <input type="email" class="form-control" id="exampleInputEmail" placeholder="E-mail" required>
+            </div>
+            <button type="submit" class="form__button">Отправить</button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h2 class="main__title products">Наши товары</h2>
+        </div>
+        <div class="row products__row">
+          <div class="col d-flex flex-column align-items-center">
+            <img src="/img/тархун премиум 2.png" alt="">
+            <p>Сладкая вода (эконом)</p>
+          </div>
+          <div class="col d-flex flex-column align-items-center">
+            <img src="/img/вишня эконом.png" alt="">
+            <p>Сладкая вода (эконом)</p>
+          </div>
+          <div class="col d-flex flex-column align-items-center">
+            <img src="/img/водичька основа.png" alt="">
+            <p>Сладкая вода (эконом)</p>
+          </div>
+          <div class="col d-flex flex-column align-items-center">
+            <img src="/img/квас-1.png" alt="">
+            <p>Сладкая вода (эконом)</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col d-flex justify-content-center">
+            <button type="submit" class="form__button products__button">Весь каталог</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid partners">
+    <div class="row">
+      <div class="col">
+        <h2 class="main__title">Как стать партнером?</h2>
+      </div>
+    </div>
+    <div class="row partners__row">
+      <div class="col d-flex flex-column align-items-start">
+        <img src="/img/тележка.png" alt="">
+        <p>Сделайте заказ на сайте</p>
+        </img>
+      </div>
+      <div class="col d-flex flex-column align-items-start">
+        <img src="/img/список.png" alt="">
+        <p>Мы оформим заказ</p>
+        </img>
+      </div>
+      <div class="col d-flex flex-column align-items-start">
+        <img src="/img/грузовик.png" alt="">
+        <p>Мы сами доставим его</p>
+        </img>
+      </div>
+      <div class="col d-flex flex-column align-items-start">
+        <img src="/img/карточка.png" alt="">
+        <p>Можете оплатить любым удобным для вас способом</p>
+        </img>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid contacts">
+    <div class="row">
+      <div class="col">
+        <h2 class="main__title">Контакты</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p><span>E-mail:</span><br>
+          ice-elbrus@mail.ru</p>
+      </div>
+      <div class="col"><span>Адрес:</span><br>
+        360015, РФ, КБР, г. Нальчик,
+        ул. Кабардинская, 148-б</div>
+      <div class="col">
+        <p><span>Телефон:</span><br>
+          <a href="tel:+79280761498">+7 (928) 076 14 98</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

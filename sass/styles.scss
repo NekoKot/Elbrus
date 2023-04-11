@@ -1,0 +1,281 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+// СБРОС СТИЛЕЙ
+
+$blue: #1946ba;
+$black: #2a2a2a;
+$gray: #8c8c8c;
+$light-gray: #dedede;
+$white: #ffffff;
+
+%title {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+}
+
+%main-title {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 75px;
+}
+
+%menu {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+%text {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+%product {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+%card-text {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+%button {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+
+  color: #c4c4c4;
+}
+
+%mobile-title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 41px;
+
+  color: #c4c4c4;
+}
+
+.navbar .container-fluid {
+  padding: 30px 80px 0 80px;
+}
+
+.container__first {
+  padding: 70px 80px 0 80px;
+}
+
+.navbar-brand {
+  font-family: "Geometria", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23px;
+  text-align: center;
+
+  color: #2a2a2a;
+  margin-right: 50px;
+}
+
+.nav-link {
+  @extend %menu;
+  margin-right: 24px;
+  color: $gray;
+}
+
+.nav-link:hover {
+  color: $blue;
+}
+
+.header__contacts {
+  width: 40%;
+}
+
+.header__contacts a {
+  margin-right: 30px;
+  @extend %menu;
+  color: $black;
+  text-decoration: none;
+}
+
+.header__contacts button {
+  width: 230px;
+  height: 40px;
+  background: #1946ba;
+  box-shadow: 0px 15px 30px rgba(25, 70, 186, 0.2);
+}
+
+.container h1 {
+  @extend %title;
+  color: $black;
+}
+
+.carousel-indicators {
+  width: 610px;
+  margin-left: 32%;
+}
+
+.carousel-indicators button {
+  width: 100%;
+  height: 4px;
+  border: none;
+  background: #dedede;
+}
+
+.carousel-indicators .active {
+  background-color: $blue;
+}
+
+.about {
+  margin-top: 210px;
+}
+
+.main__title{
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 75px;
+
+  color: #1946ba;
+}
+
+.about__description {
+  @extend %text;
+  color: $black;
+  margin-top: 105px;
+}
+
+.price__row {
+  margin-top: 160px;
+}
+
+.price__col-first {
+  height: 500px;
+  background-color: $blue;
+  background-image: url(/img/price.png);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 470px -50px;
+}
+
+.price__title {
+  @extend %main-title;
+  color: $white;
+  margin: 100px 220px 45px 80px;
+}
+
+.price_description {
+  color: $white;
+  @extend %text;
+  margin-left: 80px;
+}
+
+.price__col-second {
+  margin-left: 125px;
+}
+
+.form__item {
+  margin-bottom: 30px;
+}
+
+.form-control {
+  width: 505px;
+  height: 40px;
+  border: 1px solid #dedede;
+}
+
+.form__button {
+  width: 290px;
+  height: 40px;
+  background: #1946ba;
+  box-shadow: 0px 15px 30px rgba(25, 70, 186, 0.2);
+  border: none;
+
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #ffffff;
+  margin-top: 50px;
+}
+
+.products {
+  margin: 65px 0 70px 0;
+}
+
+.products__row img {
+  margin-bottom: 30px;
+}
+
+.products__button {
+  margin-top: 70px;
+  margin-bottom: 80px;
+}
+
+.partners {
+  background-color: $blue;
+  padding-bottom: 150px;
+}
+
+.partners .main__title {
+  color: $white;
+  margin: 110px 80px;
+}
+
+.partners__row {
+  width: 80%;
+  margin: auto;
+}
+
+.partners img {
+  width: 170px;
+  height: 140px
+}
+
+.partners p {
+  @extend %text;
+  color: $white;
+  margin-top: 35px;
+}
+
+.contacts {
+  margin: 85px 80px;
+}
+
+.contacts .main__title {
+  margin-bottom: 95px;
+}
+
+.contacts p {
+  @extend %text;
+  color: $black;
+}
+
+.contacts span {
+  color: #1946BA;
+}
