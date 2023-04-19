@@ -175,6 +175,9 @@ svg:not(:root) {
   overflow: hidden;
 }
 
+.row {
+  width: 100%;
+}
 
 html {
   box-sizing: border-box;
@@ -257,7 +260,7 @@ $white: #ffffff;
   font-size: 16px;
   line-height: 28px;
 
-  color: #1946BA;
+  color: #1946ba;
 }
 
 %button {
@@ -354,6 +357,7 @@ header .navbar-brand {
   opacity: 0;
   transition: 0.5s all;
   pointer-events: none;
+  z-index: 2;
 }
 
 .active-popup {
@@ -382,7 +386,7 @@ header .navbar-brand {
   font-size: 72px;
   line-height: 75px;
 
-  color: #1946BA;
+  color: #1946ba;
   margin-bottom: 30px;
 }
 
@@ -393,7 +397,7 @@ header .navbar-brand {
   font-size: 14px;
   line-height: 25px;
 
-  color: #2A2A2A;
+  color: #2a2a2a;
 }
 
 .popup__cross {
@@ -406,7 +410,7 @@ header .navbar-brand {
 }
 
 .form-control {
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 0;
   margin-bottom: 20px;
 }
@@ -420,19 +424,18 @@ input::-webkit-inner-spin-button {
 .popup .btn {
   width: 290px;
   height: 40px;
-  background: #1946BA;
+  background: #1946ba;
   box-shadow: 0px 15px 30px rgba(25, 70, 186, 0.2);
   border-radius: 0;
 
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 19px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-
 
 .carousel-indicators {
   width: 610px;
@@ -467,6 +470,10 @@ input::-webkit-inner-spin-button {
 
 .price__row {
   margin-top: 160px;
+}
+
+.price__col-second {
+  padding: 0;
 }
 
 .price__col-first {
@@ -521,7 +528,6 @@ input::-webkit-inner-spin-button {
   color: #ffffff;
   margin-top: 50px;
 }
-
 
 .form__button:hover,
 .form__button:focus {
@@ -595,15 +601,15 @@ input::-webkit-inner-spin-button {
 }
 
 .contacts span {
-  color: #1946BA;
+  color: #1946ba;
 }
 
 .social__icons {
   margin-top: 90px;
 }
 
-.social__icons .col {
-  margin-right: 28px;
+.social__icons a {
+  margin-right: 20px;
 }
 
 .map {
@@ -659,13 +665,13 @@ footer .nav-link:hover {
 }
 
 .сopyright p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 25px;
 
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 0;
 }
 
@@ -675,80 +681,60 @@ footer .nav-link:hover {
 }
 
 .privacy p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 25px;
   text-align: right;
 
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 40px;
 }
 
 //Слайдер
 
-// .container {
-//   max-width: 700px;
-//   margin: 0 auto;
-// }
-
-// .itc-slider__wrapper {
-//   overflow: hidden;
-// }
-
-// .itc-slider__item {
-//   flex: 0 0 50%;
-//   max-width: 50%;
-//   height: 250px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   color: rgba(255, 255, 255, 0.8);
-//   font-size: 7rem;
-// }
-
-// .itc-slider__item:nth-child(1) {
-//   background-color: #f44336;
-// }
-
-// .itc-slider__item:nth-child(2) {
-//   background-color: #9c27b0;
-// }
-
-// .itc-slider__item:nth-child(3) {
-//   background-color: #3f51b5;
-// }
-
-// .itc-slider__item:nth-child(4) {
-//   background-color: #03a9f4;
-// }
-
-// .itc-slider__item:nth-child(5) {
-//   background-color: #4caf50;
-// }
+.hidden {
+  display: none;
+}
 
 .slider__wrapper {
   position: relative;
 }
+
 .slider__item {
   position: relative;
+}
+
+.active-slide {
+  display: block;
 }
 
 .slider__indicators {
   list-style: none;
   width: 610px;
   height: 4px;
-  background-color: #DEDEDE;
+  background-color: #dedede;
   margin: 40px 0 0 200px;
-   padding: 0;
+  padding: 0;
 }
 
-.active,
-.slider__indicator:hover {
+.active {
   background-color: $blue;
-  height: 1px;
-  width: calc(610px / 3)
+  height: 4px;
+  width: calc(100% / 2.5);
+}
+
+.active-two {
+  background-color: $blue;
+  height: 4px;
+  width: calc(100% / 1.5);
+}
+
+.active-three {
+  width: 100%;
+  background-color: $blue;
+  height: 4px;
 }
 
 .numbertext {
@@ -768,18 +754,33 @@ footer .nav-link:hover {
   top: 50%;
 }
 
-
 .dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #8C8C8C;
+  background-color: #8c8c8c;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
-.dot:hover {
-  background-color: #DEDEDE;
+.dot:focus,
+.dot:hover,
+.dot:active {
+  background-color: #dedede;
 }
+
+.hidden {
+  display: none;
+}
+/*
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}*/

@@ -148,6 +148,9 @@ button svg {
 svg:not(:root) {
   overflow: hidden; }
 
+.row {
+  width: 100%; }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -200,7 +203,7 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 28px;
-  color: #1946BA; }
+  color: #1946ba; }
 
 .header__contacts button:hover, .form__button:hover,
 .form__button:focus {
@@ -263,7 +266,8 @@ header .navbar-brand {
   opacity: 0;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
-  pointer-events: none; }
+  pointer-events: none;
+  z-index: 2; }
 
 .active-popup {
   opacity: 1;
@@ -291,7 +295,7 @@ header .navbar-brand {
   font-weight: 700;
   font-size: 72px;
   line-height: 75px;
-  color: #1946BA;
+  color: #1946ba;
   margin-bottom: 30px; }
 
 .popup__description {
@@ -300,7 +304,7 @@ header .navbar-brand {
   font-weight: 400;
   font-size: 14px;
   line-height: 25px;
-  color: #2A2A2A; }
+  color: #2a2a2a; }
 
 .popup__cross {
   position: absolute;
@@ -311,7 +315,7 @@ header .navbar-brand {
   cursor: pointer; }
 
 .form-control {
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 0;
   margin-bottom: 20px; }
 
@@ -323,17 +327,17 @@ input::-webkit-inner-spin-button {
 .popup .btn {
   width: 290px;
   height: 40px;
-  background: #1946BA;
+  background: #1946ba;
   -webkit-box-shadow: 0px 15px 30px rgba(25, 70, 186, 0.2);
           box-shadow: 0px 15px 30px rgba(25, 70, 186, 0.2);
   border-radius: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 19px;
   text-align: center;
-  color: #FFFFFF; }
+  color: #ffffff; }
 
 .carousel-indicators {
   width: 610px;
@@ -360,6 +364,9 @@ input::-webkit-inner-spin-button {
 
 .price__row {
   margin-top: 160px; }
+
+.price__col-second {
+  padding: 0; }
 
 .price__col-first {
   height: 500px;
@@ -456,13 +463,13 @@ input::-webkit-inner-spin-button {
   color: #2a2a2a; }
 
 .contacts span {
-  color: #1946BA; }
+  color: #1946ba; }
 
 .social__icons {
   margin-top: 90px; }
 
-.social__icons .col {
-  margin-right: 28px; }
+.social__icons a {
+  margin-right: 20px; }
 
 .map {
   height: 800px; }
@@ -505,12 +512,12 @@ footer .nav-link:hover {
   padding: 0; }
 
 .сopyright p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 25px;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 0; }
 
 .privacy__link:hover {
@@ -518,14 +525,17 @@ footer .nav-link:hover {
   text-decoration: underline; }
 
 .privacy p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 25px;
   text-align: right;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 40px; }
+
+.hidden {
+  display: none; }
 
 .slider__wrapper {
   position: relative; }
@@ -533,19 +543,31 @@ footer .nav-link:hover {
 .slider__item {
   position: relative; }
 
+.active-slide {
+  display: block; }
+
 .slider__indicators {
   list-style: none;
   width: 610px;
   height: 4px;
-  background-color: #DEDEDE;
+  background-color: #dedede;
   margin: 40px 0 0 200px;
   padding: 0; }
 
-.active,
-.slider__indicator:hover {
+.active {
   background-color: #1946ba;
-  height: 1px;
-  width: calc(610px / 3); }
+  height: 4px;
+  width: calc(100% / 2.5); }
+
+.active-two {
+  background-color: #1946ba;
+  height: 4px;
+  width: calc(100% / 1.5); }
+
+.active-three {
+  width: 100%;
+  background-color: #1946ba;
+  height: 4px; }
 
 .numbertext {
   position: absolute;
@@ -576,13 +598,29 @@ footer .nav-link:hover {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #8C8C8C;
+  background-color: #8c8c8c;
   border-radius: 50%;
   display: inline-block;
   -webkit-transition: background-color 0.6s ease;
   transition: background-color 0.6s ease; }
 
-.dot:hover {
-  background-color: #DEDEDE; }
+.dot:focus,
+.dot:hover,
+.dot:active {
+  background-color: #dedede; }
+
+.hidden {
+  display: none; }
+
+/*
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}*/
 
 /*# sourceMappingURL=styles.css.map */
