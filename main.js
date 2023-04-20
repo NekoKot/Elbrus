@@ -67,6 +67,7 @@ dots[1].addEventListener("click", function () {
     sliders[2].classList.add('hidden');
     sliders[1].classList.remove('hidden');
     indicator[0].classList.remove('active');
+    indicator[2].classList.remove('active-three');
     indicator[1].classList.add('active-two');
 });
 
@@ -82,55 +83,3 @@ dots[2].addEventListener("click", function () {
   indicator[2].classList.add('active-three');
 });
 
-// first.addEventListener("click", function (e, sliders[1]) {
-//   e.target.style.background = "#dedede";
-//   sliders[1].classList.remove('hidden');
-// }
-
-// second.addEventListener("click", function (e) {
-//   sliders.classList.remove("hidden");
-//   sliders[1].style.display = 'block';
-//   e.target.style.background = "#dedede";
-// });
-
-  //   } else if (e.target.classList.contains("second")) {
-  //     sliders[0].style.display = 'none';
-  //     sliders[1].classList.remove('hidden');
-  //     e.target.style.background = "#dedede";
-  //   } else if (e.target.classList.contains('third')){
-  //     sliders[2].style.display = 'block';
-  //     e.target.style.background = "#dedede";
-  //   }
-  // });
-
-// Клик по кнопке
-
-/*
-/ Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let i;
-  if (n > sliderItem.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = sliderItem.length;
-  }
-  for (i = 0; i < sliderItem.length; i++) {
-    sliderItem[i].style.display = "none";
-  }
-  for (i = 0; i < dot.length; i++) {
-    dot[i].className = dot[i].className.replace(" active", "");
-  }
-  sliderItem[slideIndex - 1].style.display = "block";
-  dot[slideIndex - 1].className += " active";
-}
-*/
