@@ -31,6 +31,38 @@
 				</div>
 			</div>
 		</nav>
+		<!--  -->
+		<div id="header__burger">
+			<span></span>
+		</div>
+
+		<div class="mobile-menu">
+			<div class="mobile-menu__header">
+				<a href="/" class="mobile-menu__logo">
+					<img class="mobile-menu__img" src="./img/" alt=""></a>
+			</div>
+			<div class="mobile-menu__list">
+				<ul>
+					<li class="mobile-menu__link"><a href="">Главная</a></li>
+					<li class="mobile-menu__link"><a href="/">Каталог</a></li>
+					<li class="mobile-menu__link"><a href="">Как заказать</a></li>
+					<li class="mobile-menu__link"><a href="/">Отзывы</a></li>
+					<li class="mobile-menu__link"><a href="/">О нас</a></li>
+					<li class="mobile-menu__link"><a href="/">Контакты</a></li>
+				</ul>
+				<div class="mobile__description">
+					<p>«Эльбрусская Прохлада» © 2018</p>
+					<p>Сделано NekoKot</p>
+					<a href="">Политика Конфиденциальности</a>
+					<div class="mobile__social">
+						<a href=""><img src="./img/vk-footer.svg" alt=""></a>
+						<a href=""><img src="./img/facebook-footer.svg" alt=""></a>
+						<a href=""><img src="./img/insta-footer.svg" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</header>
 	<!-- Form -->
 	<div class="popup__wrapper">
@@ -42,7 +74,8 @@
 				время.</p>
 			<div>
 				<input class="form-control" name="first-name" type="text" placeholder="Имя" required>
-				<input class="form-control" name="email" type="email" placeholder="Эл. почта" aria-describedby="emailHelp">
+				<input class="form-control" name="email" type="email" placeholder="Эл. почта"
+					aria-describedby="emailHelp">
 				<input class="form-control" name="phone" type="number" placeholder="Телефон" required>
 				<button role="button" type="submit" class="btn">Отправить</button>
 			</div>
@@ -128,8 +161,8 @@
 					</div>
 					<!-- стрелки -->
 					<div class="col-2 col-xl-2 d-flex flex-row about__arrows">
-						<img src="img/back arrow.svg" alt="Стрелка назад" role="button" class="arrow">
-						<img src="img/forward arrow.svg" alt="Стрелка вперед" role="button" class="arrow">
+						<img src="img/back arrow.svg" alt="Стрелка назад" role="button" class="arrow arrow-back">
+						<img src="img/forward arrow.svg" alt="Стрелка вперед" role="button" class="arrow arrow-forward">
 					</div>
 				</div>
 				<!-- блоки карусели -->
@@ -194,11 +227,12 @@
 		<div class="col-6 col-xxl-5 col-xl-5 col-lg-5 price__col-second">
 			<form method="post" action="/" autocomplete="off">
 				<div class="form__item">
-					<input type="name" class="form-control" id="exampleInputName" name="first-name" placeholder="Имя" required
-						aria-describedby="emailHelp">
+					<input type="name" class="form-control" id="exampleInputName" name="first-name" placeholder="Имя"
+						required aria-describedby="emailHelp">
 				</div>
 				<div>
-					<input type="email" class="form-control" id="exampleInputEmail" name="email" placeholder="E-mail" required>
+					<input type="email" class="form-control" id="exampleInputEmail" name="email" placeholder="E-mail"
+						required>
 				</div>
 				<button type="submit" role="button" class="form__button">Отправить</button>
 			</form>
@@ -332,6 +366,21 @@
 		</nav>
 	</footer>
 	<script src="main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(function () {
+			$('#header__burger').click(function () {
+				$(this).toggleClass('open');
+			});
+		});
+
+		$(document).ready(function () {
+			$('#header__burger').click(function (event) {
+				$('#header__burger, .mobile-menu').toggleClass('active');
+				$('body').toggleClass('lock');
+			})
+		})
+	</script>
 </body>
 
 </html>

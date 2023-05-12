@@ -110,11 +110,12 @@ for (let i = 0; i < arrow.length; i++) {
   arrow[i].addEventListener("click", () => (i == 0 ? gotoPrev() : gotoNext()));
 }
 
-
 const gotoPrev = () =>
   current > 0 ? gotoNum(current - 1) : gotoNum(cards.length - 1);
 
-const gotoNext = () => current < 5 ? gotoNum(current + 1) : gotoNum(0);
+const gotoNext = function () {
+  current < 5 ? gotoNum(current + 1) : gotoNum(0);
+};
 
 const gotoNum = (number) => {
   current = number;
@@ -137,3 +138,33 @@ const gotoNum = (number) => {
   cards[current].classList.add("activeCard");
   cards[prevCard].classList.add("card__invisible");
 };
+
+
+// const gap = 16;
+
+// const carousel = document.getElementsByClassName("about__slider"),
+//   content = document.getElementsByClassName("about__slider-col"),
+//   next = document.getElementsByClassName("arrow-forward"),
+//   prev = document.getElementsByClassName("arrow-back");
+
+// next.addEventListener("click", (e) => {
+//   content.scrollBy(width + gap, 0);
+//   if (content.scrollWidth !== 0) {
+//     prev.style.display = "flex";
+//   }
+//   if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+//     next.style.display = "none";
+//   }
+// });
+// prev.addEventListener("click", (e) => {
+//   carousel.scrollBy(-(width + gap), 0);
+//   if (carousel.scrollLeft - width - gap <= 0) {
+//     prev.style.display = "none";
+//   }
+//   if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+//     next.style.display = "flex";
+//   }
+// });
+
+// let width = carousel.offsetWidth;
+// window.addEventListener("resize", (e) => (width = carousel.offsetWidth));
