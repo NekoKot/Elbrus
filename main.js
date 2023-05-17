@@ -140,6 +140,7 @@ $(document).ready(function () {
 //   arrow[i].addEventListener("click", () => (i == 0 ? gotoPrev() : gotoNext()));
 // }
 
+<<<<<<< HEAD
 // const gotoPrev = () =>
 //   current > 0 ? gotoNum(current - 1) : gotoNum(cards.length - 1);
 
@@ -152,6 +153,14 @@ $(document).ready(function () {
 //   current = number;
 //   prevCard = current - 1;
 //   nextCard = current + 1;
+=======
+const gotoPrev = () =>
+  current > 0 ? gotoNum(current - 1) : gotoNum(cards.length - 1);
+
+const gotoNext = function () {
+  current < 5 ? gotoNum(current + 1) : gotoNum(0);
+};
+>>>>>>> dceed1d20d75c5ae2f4af6091a585f0c4fa770e1
 
 //   for (let i = 0; i < cards.length; i++) {
 //     cards[i].classList.remove("activeCard");
@@ -166,6 +175,46 @@ $(document).ready(function () {
 //     prevCard = 4;
 //   }
 
+<<<<<<< HEAD
 //   cards[current].classList.add("activeCard");
 //   cards[prevCard].classList.add("card__invisible");
 // };
+=======
+  if (prevCard == 0) {
+    prevCard = 4;
+  }
+
+  cards[current].classList.add("activeCard");
+  cards[prevCard].classList.add("card__invisible");
+};
+
+
+// const gap = 16;
+
+// const carousel = document.getElementsByClassName("about__slider"),
+//   content = document.getElementsByClassName("about__slider-col"),
+//   next = document.getElementsByClassName("arrow-forward"),
+//   prev = document.getElementsByClassName("arrow-back");
+
+// next.addEventListener("click", (e) => {
+//   content.scrollBy(width + gap, 0);
+//   if (content.scrollWidth !== 0) {
+//     prev.style.display = "flex";
+//   }
+//   if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+//     next.style.display = "none";
+//   }
+// });
+// prev.addEventListener("click", (e) => {
+//   carousel.scrollBy(-(width + gap), 0);
+//   if (carousel.scrollLeft - width - gap <= 0) {
+//     prev.style.display = "none";
+//   }
+//   if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+//     next.style.display = "flex";
+//   }
+// });
+
+// let width = carousel.offsetWidth;
+// window.addEventListener("resize", (e) => (width = carousel.offsetWidth));
+>>>>>>> dceed1d20d75c5ae2f4af6091a585f0c4fa770e1

@@ -16,14 +16,14 @@
 <body>
 	<header>
 		<nav class="navbar">
-			<div class="container-fluid justify-content-between nowrap">
+			<div class="container-fluid justify-content-between flex-nowrap">
 				<a class="navbar-brand" href="#">Эльбрусская<br>Прохлада</a>
-				<nav class="nav flex-nowrap">
+				<nav class="nav d-flex flex-nowrap">
 					<a class="nav-link" href="#">Главная</a>
 					<a class="nav-link" href="#">Каталог</a>
-					<a class="nav-link" href="#">Как заказать</a>
+					<a class="nav-link" href="#">Как&nbsp;заказать</a>
 					<a class="nav-link" href="#">Отзывы</a>
-					<a class="nav-link" href="#">О нас</a>
+					<a class="nav-link" href="#">О&nbsp;нас</a>
 					<a class="nav-link" href="#">Контакты</a>
 				</nav>
 				<div class="header__contacts d-flex flex-row justify-content-end align-items-center">
@@ -32,6 +32,38 @@
 				</div>
 			</div>
 		</nav>
+		<!--  -->
+		<div id="header__burger">
+			<span></span>
+		</div>
+
+		<div class="mobile-menu">
+			<div class="mobile-menu__header">
+				<a href="/" class="mobile-menu__logo">
+					<img class="mobile-menu__img" src="./img/" alt=""></a>
+			</div>
+			<div class="mobile-menu__list">
+				<ul>
+					<li class="mobile-menu__link"><a href="">Главная</a></li>
+					<li class="mobile-menu__link"><a href="/">Каталог</a></li>
+					<li class="mobile-menu__link"><a href="">Как заказать</a></li>
+					<li class="mobile-menu__link"><a href="/">Отзывы</a></li>
+					<li class="mobile-menu__link"><a href="/">О нас</a></li>
+					<li class="mobile-menu__link"><a href="/">Контакты</a></li>
+				</ul>
+				<div class="mobile__description">
+					<p>«Эльбрусская Прохлада» © 2018</p>
+					<p>Сделано NekoKot</p>
+					<a href="">Политика Конфиденциальности</a>
+					<div class="mobile__social">
+						<a href=""><img src="./img/vk-footer.svg" alt=""></a>
+						<a href=""><img src="./img/facebook-footer.svg" alt=""></a>
+						<a href=""><img src="./img/insta-footer.svg" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</header>
 	<!-- Form -->
 	<div class="popup__wrapper">
@@ -43,7 +75,8 @@
 				время.</p>
 			<div>
 				<input class="form-control" name="first-name" type="text" placeholder="Имя" required>
-				<input class="form-control" name="email" type="email" placeholder="Эл. почта" aria-describedby="emailHelp">
+				<input class="form-control" name="email" type="email" placeholder="Эл. почта"
+					aria-describedby="emailHelp">
 				<input class="form-control" name="phone" type="number" placeholder="Телефон" required>
 				<button role="button" type="submit" class="btn">Отправить</button>
 			</div>
@@ -52,14 +85,14 @@
 	<!--  -->
 	<div class="container-fluid container__first">
 		<div class="row align-items-center">
-			<div class="col">
+			<div class="col-6 col-xl-6">
 				<h1 class="container__first-title">Оптовые поставки<br>
 					минеральной воды<br>
 					и безалкогольных напитков</h1>
 			</div>
 
 			<!-- SLIDER -->
-			<div class="col">
+			<div class="col-6 col-xl-6 col-lg-6">
 				<div class="slider" data-autoplay="true" data-interval="7000" data-loop="true">
 					<div class="slider__wrapper">
 						<div class="slider__items">
@@ -97,7 +130,7 @@
 		</div>
 		<!-- Страница 2 -->
 		<div class="row about">
-			<div class="col-6">
+			<div class="col-6 col-xl-5">
 				<h2 class="about__title">Немного о нас</h2>
 				<p class="about__description">ООО "Эльбрусская прохлада"- отптовые продажи безалкогольных напитков от
 					производителя.Широкий ассортимент
@@ -107,7 +140,7 @@
 					поблизости крупных предприятий и сельхозугодий гарантирует чистоту добываемой воды. </p>
 			</div>
 			<!-- Слайдер -->
-			<div class="col-6">
+			<div class="col-6 col-xl-6 m-auto mr-0 p-0 slider">
 				<div class="row d-flex flex-row align-items-center flex-nowrap justify-content-start">
 
 					<section class="splide" aria-label="Splide Basic HTML Example">
@@ -136,7 +169,11 @@
 					</section>
 
 					<!-- цифры -->
+<<<<<<< HEAD
 					<!-- <div class="col">
+=======
+					<div class="col-1">
+>>>>>>> dceed1d20d75c5ae2f4af6091a585f0c4fa770e1
 						<span class="numbers numbers_active">1/5</span>
 						<span class="numbers">2/5</span>
 						<span class="numbers">3/5</span>
@@ -144,7 +181,11 @@
 						<span class="numbers">5/5</span>
 					</div>
 					<!-- линия -->
+<<<<<<< HEAD
 					<!-- <div class="col">
+=======
+					<div class="col-10 col-xl-10">
+>>>>>>> dceed1d20d75c5ae2f4af6091a585f0c4fa770e1
 						<ol class="about__slider-indicators">
 							<li class="about__slider-indicator active"></li>
 							<li class="about__slider-indicator"></li>
@@ -154,9 +195,15 @@
 						</ol>
 					</div> -->
 					<!-- стрелки -->
+<<<<<<< HEAD
 					<!-- <div class="col d-flex flex-row about__arrows">
 						<img src="img/back arrow.svg" alt="Стрелка назад" role="button" class="arrow">
 						<img src="img/forward arrow.svg" alt="Стрелка вперед" role="button" class="arrow">
+=======
+					<div class="col-2 col-xl-2 d-flex flex-row about__arrows">
+						<img src="img/back arrow.svg" alt="Стрелка назад" role="button" class="arrow arrow-back">
+						<img src="img/forward arrow.svg" alt="Стрелка вперед" role="button" class="arrow arrow-forward">
+>>>>>>> dceed1d20d75c5ae2f4af6091a585f0c4fa770e1
 					</div>
 				</div> -->
 					<!-- блоки карусели -->
@@ -211,21 +258,22 @@
 			</div>
 		</div>
 	</div>
-	<div class="row price__row">
-		<div class="col-6 price__col-first">
+	<div class="row d-flex flex-row flex-wrap price__row">
+		<div class="col-6 col-xxl-5 col-xl-5 col-lg-5 price__col-first">
 			<h2 class="price__title">Получить
 				оптовый
 				прайс</h2>
 			<p class="price_description">Оставьте заявку и получите прайс на почту</p>
 		</div>
-		<div class="col price__col-second d-flex align-items-center">
+		<div class="col-6 col-xxl-5 col-xl-5 col-lg-5 price__col-second">
 			<form method="post" action="/" autocomplete="off">
 				<div class="form__item">
-					<input type="name" class="form-control" id="exampleInputName" name="first-name" placeholder="Имя" required
-						aria-describedby="emailHelp">
+					<input type="name" class="form-control" id="exampleInputName" name="first-name" placeholder="Имя"
+						required aria-describedby="emailHelp">
 				</div>
 				<div>
-					<input type="email" class="form-control" id="exampleInputEmail" name="email" placeholder="E-mail" required>
+					<input type="email" class="form-control" id="exampleInputEmail" name="email" placeholder="E-mail"
+						required>
 				</div>
 				<button type="submit" role="button" class="form__button">Отправить</button>
 			</form>
@@ -374,6 +422,21 @@
 		splide.mount();
 	</script>
 	<script src="main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(function () {
+			$('#header__burger').click(function () {
+				$(this).toggleClass('open');
+			});
+		});
+
+		$(document).ready(function () {
+			$('#header__burger').click(function (event) {
+				$('#header__burger, .mobile-menu').toggleClass('active');
+				$('body').toggleClass('lock');
+			})
+		})
+	</script>
 </body>
 
 </html>
