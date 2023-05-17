@@ -504,27 +504,92 @@ input::-webkit-inner-spin-button {
   padding-right: 0;
 }
 
-.about__slider {
-  max-width: 100%;
-  position: relative;
-  margin: 0 auto 0 100px;
-  padding: 20px 20px;
-  overflow: hidden;
+.splide__track {
+  height: 320px;
 }
 
-.about__slider .card {
+.splide__list {
+  margin-top: 20px !important;
+}
+
+.splide__slide {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 295px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   height: 265px;
-  background: #ffffff;
+  background: #FFFFFF;
+
   box-shadow: 0px 5px 20px rgba(25, 70, 186, 0.2);
   margin-right: 20px;
   border: none;
   border-radius: 0;
   transition: all 300ms ease-in-out;
 }
+
+.splide__slide img {
+  width: 85px;
+  margin: 30px 0 0 20px;
+}
+
+.splide__slide p {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: #2A2A2A;
+  margin: 30px 20px 0 20px;
+}
+
+
+.splide__slide:not(.is-visible),
+.splide__slide:not(.is-active) {
+  opacity: 0.5;
+}
+
+.splide__pagination__page {
+  display: flex;
+  list-style: none;
+  width: 610px;
+  height: 4px;
+  background-color: #dedede;
+  padding: 0;
+  width: 100%;
+}
+
+
+.splide__pagination__page {
+  width: 100%;
+  &.is-active {
+    background-color: #1946ba;
+  }
+}
+
+
+
+// .about__slider {
+//   max-width: 100%;
+//   position: relative;
+//   margin: 0 auto 0 100px;
+//   padding: 20px 20px;
+//   overflow: hidden;
+// }
+
+// .about__slider .card {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   min-width: 295px;
+//   height: 265px;
+//   background: #ffffff;
+//   box-shadow: 0px 5px 20px rgba(25, 70, 186, 0.2);
+//   margin-right: 20px;
+//   border: none;
+//   border-radius: 0;
+//   transition: all 300ms ease-in-out;
+// }
 
 .card__invisible {
   opacity: 0.5;
@@ -559,6 +624,7 @@ input::-webkit-inner-spin-button {
 
   color: #2a2a2a;
 }
+
 .price__row {
   margin-top: 160px;
 }

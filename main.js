@@ -23,117 +23,149 @@ function closePopup() {
 }
 // end
 
+$(document).ready(function () {
+  $(".second__slider").slick();
+});
+
+// $(".center").slick({
+//   centerMode: true,
+//   centerPadding: "60px",
+//   slidesToShow: 3,
+//   responsive: [
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         arrows: false,
+//         centerMode: true,
+//         centerPadding: "40px",
+//         slidesToShow: 3,
+//       },
+//     },
+//     {
+//       breakpoint: 480,
+//       settings: {
+//         arrows: false,
+//         centerMode: true,
+//         centerPadding: "40px",
+//         slidesToShow: 1,
+//       },
+//     },
+//   ],
+// });
+
 // slider
 
-const dotsWrapper = document.querySelector(".right__dottes");
-const sliderItem = document.querySelectorAll(".slider__item");
-const dot = document.querySelector(".dot");
+// const dotsWrapper = document.querySelector(".right__dottes");
+// const sliderItem = document.querySelectorAll(".slider__item");
+// const dot = document.querySelector(".dot");
 
-const sliderItems = document.querySelector(".slider__items");
-const first = document.querySelector(".first");
-const second = document.querySelector(".second");
+// const sliderItems = document.querySelector(".slider__items");
+// const first = document.querySelector(".first");
+// const second = document.querySelector(".second");
 
-const sliderId = document.querySelector(".slider__indicators");
+// const sliderId = document.querySelector(".slider__indicators");
 
-const sliders = Array.from(sliderItems.children);
-const dots = Array.from(dotsWrapper.children);
-const indicator = Array.from(sliderId.children);
+// const sliders = Array.from(sliderItems.children);
+// const dots = Array.from(dotsWrapper.children);
+// const indicator = Array.from(sliderId.children);
 
 // Скрываем все слайды
-sliders.forEach(function (sliders, index) {
-  if (index !== 0) {
-    sliders.classList.add("hidden");
-  }
-});
+// sliders.forEach(function (sliders, index) {
+//   if (index !== 0) {
+//     sliders.classList.add("hidden");
+//   }
+// });
 
-dots[0].addEventListener("click", function () {
-  dots[1].style.background = "#8c8c8c";
-  dots[2].style.background = "#8c8c8c";
-  this.style.background = "#dedede";
-  sliders[2].classList.add("hidden");
-  sliders[1].classList.add("hidden");
-  sliders[0].classList.remove("hidden");
-  indicator[1].classList.remove("active");
-  indicator[2].classList.remove("active");
-  indicator[0].classList.add("active");
-});
+// dots[0].addEventListener("click", function () {
+//   dots[1].style.background = "#8c8c8c";
+//   dots[2].style.background = "#8c8c8c";
+//   this.style.background = "#dedede";
+//   sliders[2].classList.add("hidden");
+//   sliders[1].classList.add("hidden");
+//   sliders[0].classList.remove("hidden");
+//   indicator[1].classList.remove("active");
+//   indicator[2].classList.remove("active");
+//   indicator[0].classList.add("active");
+// });
 
-dots[1].addEventListener("click", function () {
-  dots[0].style.background = "#8c8c8c";
-  dots[2].style.background = "#8c8c8c";
-  this.style.background = "#dedede";
-  sliders[0].classList.add("hidden");
-  sliders[2].classList.add("hidden");
-  sliders[1].classList.remove("hidden");
-  indicator[0].classList.remove("active");
-  indicator[2].classList.remove("active");
-  indicator[1].classList.add("active");
-});
+// dots[1].addEventListener("click", function () {
+//   dots[0].style.background = "#8c8c8c";
+//   dots[2].style.background = "#8c8c8c";
+//   this.style.background = "#dedede";
+//   sliders[0].classList.add("hidden");
+//   sliders[2].classList.add("hidden");
+//   sliders[1].classList.remove("hidden");
+//   indicator[0].classList.remove("active");
+//   indicator[2].classList.remove("active");
+//   indicator[1].classList.add("active");
+// });
 
-dots[2].addEventListener("click", function () {
-  dots[0].style.background = "#8c8c8c";
-  dots[1].style.background = "#8c8c8c";
-  this.style.background = "#dedede";
-  sliders[0].classList.add("hidden");
-  sliders[1].classList.add("hidden");
-  sliders[2].classList.remove("hidden");
-  indicator[0].classList.remove("active");
-  indicator[1].classList.remove("active");
-  indicator[2].classList.add("active");
-});
+// dots[2].addEventListener("click", function () {
+//   dots[0].style.background = "#8c8c8c";
+//   dots[1].style.background = "#8c8c8c";
+//   this.style.background = "#dedede";
+//   sliders[0].classList.add("hidden");
+//   sliders[1].classList.add("hidden");
+//   sliders[2].classList.remove("hidden");
+//   indicator[0].classList.remove("active");
+//   indicator[1].classList.remove("active");
+//   indicator[2].classList.add("active");
+// });
 
-// Slider in block About us
+// // Slider in block About us
 
-const arrow = document.querySelectorAll(".arrow");
-const numbers = document.querySelector(".numbers");
-const indicators = document.querySelector(".about__slider-indicators");
-const cards = document.querySelectorAll(".about__card");
-const container = document.querySelector(".about__slider-col");
+// const arrow = document.querySelectorAll(".arrow");
+// const numbers = document.querySelector(".numbers");
+// const indicators = document.querySelector(".about__slider-indicators");
+// const cards = document.querySelectorAll(".about__card");
+// const container = document.querySelector(".about__slider-col");
 
-let current = 0;
-let prevCard = 4;
-let nextCard = 1;
+// let current = 0;
+// let prevCard = 4;
+// let nextCard = 1;
 
-const allCards = Array.from(cards);
-const buttons = Array.from(arrow);
+// const allCards = Array.from(cards);
+// const buttons = Array.from(arrow);
 
-// Скрываем все слайды. кроме текущего
-allCards.forEach(function (allCards, activeCard) {
-  if (activeCard) {
-    allCards.classList.add("card__invisible");
-  }
-});
+// // Скрываем все слайды. кроме текущего
+// allCards.forEach(function (allCards, activeCard) {
+//   if (activeCard) {
+//     allCards.classList.add("card__invisible");
+//   }
+// });
 
-// Клик по стрелкам
+// // Клик по стрелкам
 
-for (let i = 0; i < arrow.length; i++) {
-  arrow[i].addEventListener("click", () => (i == 0 ? gotoPrev() : gotoNext()));
-}
+// for (let i = 0; i < arrow.length; i++) {
+//   arrow[i].addEventListener("click", () => (i == 0 ? gotoPrev() : gotoNext()));
+// }
 
+// const gotoPrev = () =>
+//   current > 0 ? gotoNum(current - 1) : gotoNum(cards.length - 1);
 
-const gotoPrev = () =>
-  current > 0 ? gotoNum(current - 1) : gotoNum(cards.length - 1);
+// const gotoNext = function () {
+//   current < 5 ? gotoNum(current + 1) : gotoNum(0);
+//   // container.style.transform = "translateX(-120px)";
+// };
 
-const gotoNext = () => current < 5 ? gotoNum(current + 1) : gotoNum(0);
+// const gotoNum = (number) => {
+//   current = number;
+//   prevCard = current - 1;
+//   nextCard = current + 1;
 
-const gotoNum = (number) => {
-  current = number;
-  prevCard = current - 1;
-  nextCard = current + 1;
+//   for (let i = 0; i < cards.length; i++) {
+//     cards[i].classList.remove("activeCard");
+//     cards[i].classList.add("card__invisible");
+//   }
 
-  for (let i = 0; i < cards.length; i++) {
-    cards[i].classList.remove("activeCard");
-    cards[i].classList.add("card__invisible");
-  }
+//   if (nextCard == 4) {
+//     nextCard = 0;
+//   }
 
-  if (nextCard == 4) {
-    nextCard = 0;
-  }
+//   if (prevCard == 0) {
+//     prevCard = 4;
+//   }
 
-  if (prevCard == 0) {
-    prevCard = 4;
-  }
-
-  cards[current].classList.add("activeCard");
-  cards[prevCard].classList.add("card__invisible");
-};
+//   cards[current].classList.add("activeCard");
+//   cards[prevCard].classList.add("card__invisible");
+// };

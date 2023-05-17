@@ -8,6 +8,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
 		integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 	<title>Эльбрусская прохлада</title>
 </head>
@@ -108,8 +109,34 @@
 			<!-- Слайдер -->
 			<div class="col-6">
 				<div class="row d-flex flex-row align-items-center flex-nowrap justify-content-start">
+
+					<section class="splide" aria-label="Splide Basic HTML Example">
+						<div class="splide__track">
+							<ul class="splide__list">
+								<li class="splide__slide">
+									<img src="/img/discount.svg" class="card-img-top" alt="">
+									<p class="card-text">Индивидуальные скидки
+										в зависимости
+										от объема покупки</p>
+								</li>
+								<li class="splide__slide">
+									<img src="/img/discount.svg" class="card-img-top" alt="">
+									<p class="card-text">Индивидуальные скидки
+										в зависимости
+										от объема покупки</p>
+								</li>
+								<li class="splide__slide">
+									<img src="/img/discount.svg" class="card-img-top" alt="">
+									<p class="card-text">Индивидуальные скидки
+										в зависимости
+										от объема покупки</p>
+								</li>
+							</ul>
+						</div>
+					</section>
+
 					<!-- цифры -->
-					<div class="col">
+					<!-- <div class="col">
 						<span class="numbers numbers_active">1/5</span>
 						<span class="numbers">2/5</span>
 						<span class="numbers">3/5</span>
@@ -117,7 +144,7 @@
 						<span class="numbers">5/5</span>
 					</div>
 					<!-- линия -->
-					<div class="col">
+					<!-- <div class="col">
 						<ol class="about__slider-indicators">
 							<li class="about__slider-indicator active"></li>
 							<li class="about__slider-indicator"></li>
@@ -125,17 +152,17 @@
 							<li class="about__slider-indicator"></li>
 							<li class="about__slider-indicator"></li>
 						</ol>
-					</div>
+					</div> -->
 					<!-- стрелки -->
-					<div class="col d-flex flex-row about__arrows">
+					<!-- <div class="col d-flex flex-row about__arrows">
 						<img src="img/back arrow.svg" alt="Стрелка назад" role="button" class="arrow">
 						<img src="img/forward arrow.svg" alt="Стрелка вперед" role="button" class="arrow">
 					</div>
-				</div>
-				<!-- блоки карусели -->
-				<div class="row-6 about__slider">
-					<div class="col about__slider-col d-flex flex-row ">
-						<div class="card about__card">
+				</div> -->
+					<!-- блоки карусели -->
+					<!--	<div class="row-6 about__slider">
+					<div class="col about__slider-col d-flex flex-row second-slider">
+						<div class="card about__card slider__item">
 							<img src="/img/discount.svg" class="card-img-top" alt="">
 							<div class="card-body">
 								<p class="card-text">Индивидуальные скидки
@@ -144,7 +171,7 @@
 							</div>
 						</div>
 
-						<div class="card about__card">
+						<div class="card about__card slider__item">
 							<img src="/img/discount.svg" class="card-img-top" alt="">
 							<div class="card-body">
 								<p class="card-text">Индивидуальные скидки
@@ -153,7 +180,7 @@
 							</div>
 						</div>
 
-						<div class="card about__card">
+						<div class="card about__card slider__item">
 							<img src="/img/discount.svg" class="card-img-top" alt="">
 							<div class="card-body">
 								<p class="card-text">Индивидуальные скидки
@@ -162,7 +189,7 @@
 							</div>
 						</div>
 
-						<div class="card about__card">
+						<div class="card about__card slider__item">
 							<img src="/img/discount.svg" class="card-img-top" alt="...">
 							<div class="card-body">
 								<p class="card-text">Индивидуальные скидки
@@ -171,7 +198,7 @@
 							</div>
 						</div>
 
-						<div class="card about__card">
+						<div class="card about__card slider__item">
 							<img src="/img/discount.svg" class="card-img-top" alt="...">
 							<div class="card-body">
 								<p class="card-text">Индивидуальные скидки
@@ -179,7 +206,7 @@
 									от объема покупки</p>
 							</div>
 						</div>
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</div>
@@ -331,6 +358,21 @@
 			</div>
 		</nav>
 	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script>
+		new Splide('.splide').mount();
+	</script>
+	<script>
+		var splide = new Splide('.splide', {
+			type: 'loop',
+			perPage: 3,
+			focus: 'center',
+		});
+
+		splide.mount();
+	</script>
 	<script src="main.js"></script>
 </body>
 
